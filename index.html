@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>rubik cube</title>
+<style type="text/css">
+*{
+    text-align: center;
+}
+div{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    transform-style:preserve-3d; 
+    transform:perspective(300px)   ;
+    transition: 10s;
+   }
+ 
+div:hover {
+    transform:  perspective(300px) rotateX(360deg) rotateZ(360deg) rotateY(360deg)  ;  
+}
+div img{
+    position: absolute;
+    height: 100px;
+    width:100px;
+    backface-visibility: hidden;
+  }
+div img:nth-child(1){
+     transform: translateZ(-50px) rotateY(180deg); 
+ }
+div img:nth-child(2){
+    transform: translateZ(50px) ;
+}
+div img:nth-child(3){
+    transform: rotateY(270deg) translateZ(50px);
+    
+}
+div img:nth-child(4){
+    transform: rotateY(90deg) translateZ(50px);
+}
+div img:nth-child(5){
+    transform: rotateX(90deg) translateZ(50px);
+}
+div img:nth-child(6){
+    transform: rotateX(270deg) translateZ(50px);
+}
+ 
+ 
+</style>	 
+</head>
+<body  >
+      <div>
+          <img src="PHOTOS/cube_face.png" alt="a">
+          <img src="PHOTOS/cube_face.png" alt="a"> 
+          <img src="PHOTOS/cube_face.png" alt="a">  
+          <img src="PHOTOS/cube_face.png" alt="a">
+          <img src="PHOTOS/cube_face.png" alt="a">
+          <img src="PHOTOS/cube_face.png" alt="a">
+
+      </div>
+
+      <button id="x">X</button>
+      <button id="y">Y</button>
+      <button id="z">Z</button>
+
+        
+
+</body> 
+
+ </html>
